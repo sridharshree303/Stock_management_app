@@ -25,13 +25,13 @@ public class Stock implements Serializable{
 	@Column
 	private String stockName;
 	
-	@OneToOne
-	@JoinColumn(name="investorId")
-	private Investor investor;
-	
-	@OneToOne
-	@JoinColumn(name="companyId")
-	private Company company;
+//	@OneToOne
+//	@JoinColumn(name="investorId")
+//	private Investor investor;
+//	
+//	@OneToOne
+//	@JoinColumn(name="companyId")
+//	private Company company;
 	
 	@Column
 	private int quantity;
@@ -56,13 +56,13 @@ public class Stock implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Stock(int stockId, String stockName, Investor investor, Company company, int quantity, String type,
-			double avgPrice, int totalNoOfStocks, double profitLoss, String status) {
+	public Stock(int stockId, String stockName, int quantity, String type,
+			double avgPrice, int totalNoOfStocks, double profitLoss, String status) { //Investor investor, Company company
 		super();
 		this.stockId = stockId;
 		this.stockName = stockName;
-		this.investor = investor;
-		this.company = company;
+//		this.investor = investor;
+//		this.company = company;
 		this.quantity = quantity;
 		this.type = type;
 		this.avgPrice = avgPrice;
@@ -86,22 +86,22 @@ public class Stock implements Serializable{
 	public void setStockName(String stockName) {
 		this.stockName = stockName;
 	}
-
-	public Investor getInvestor() {
-		return investor;
-	}
-
-	public void setInvestor(Investor investor) {
-		this.investor = investor;
-	}
-
-	public Company getCompany() {
-		return company;
-	}
-
-	public void setCompany(Company company) {
-		this.company = company;
-	}
+//
+//	public Investor getInvestor() {
+//		return investor;
+//	}
+//
+//	public void setInvestor(Investor investor) {
+//		this.investor = investor;
+//	}
+//
+//	public Company getCompany() {
+//		return company;
+//	}
+//
+//	public void setCompany(Company company) {
+//		this.company = company;
+//	}
 
 	public int getQuantity() {
 		return quantity;
@@ -157,9 +157,9 @@ public class Stock implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Stock [stockId=" + stockId + ", stockName=" + stockName + ", investor=" + investor + ", company="
-				+ company + ", quantity=" + quantity + ", type=" + type + ", avgPrice=" + avgPrice
-				+ ", totalNoOfStocks=" + totalNoOfStocks + ", profitLoss=" + profitLoss + ", status=" + status + "]";
+		return "Stock [stockId=" + stockId + ", stockName=" + stockName + ", quantity=" + quantity + ", type=" + type + ", avgPrice=" + avgPrice
+				+ ", totalNoOfStocks=" + totalNoOfStocks + ", profitLoss=" + profitLoss + ", status=" + status + "]";//company="
+				//+ company + ",investor=" + investor + ",
 	}
 	
 	

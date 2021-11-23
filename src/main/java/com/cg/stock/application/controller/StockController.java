@@ -38,27 +38,27 @@ public class StockController {
 		
 	}
 	
-	@PutMapping("/updateStockDetails")
-	public ResponseEntity<Stock> updateStockDetails(@RequestBody Stock stock) {
-		LOG.info("updateStockDetails");
-		Stock stk=stockService.updateStockDetails(stock);
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("message", "This stock is not present in the database.");
-		LOG.info(headers.toString());
-		ResponseEntity<Stock> response = new ResponseEntity<Stock>(stk, headers, HttpStatus.OK);
-		return response;
-	}
-	
-	@DeleteMapping("/removeStockDetails")
-	public ResponseEntity<Stock> removeStockDetails(@PathVariable Stock stock) {
-		LOG.info("removeStockDetails");
-		Stock stk = stockService.removeStockDetails(stock);
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("message", "Stock deleted successfully.");
-		LOG.info(headers.toString());
-		ResponseEntity<Stock> response = new ResponseEntity<Stock>(stk, headers, HttpStatus.OK);
-		return response;
-	}
+//	@PutMapping("/updateStockDetails")
+//	public ResponseEntity<Stock> updateStockDetails(@RequestBody Stock stock) {
+//		LOG.info("updateStockDetails");
+//		Stock stk=stockService.updateStockDetails(stock);
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.add("message", "This stock is not present in the database.");
+//		LOG.info(headers.toString());
+//		ResponseEntity<Stock> response = new ResponseEntity<Stock>(stk, headers, HttpStatus.OK);
+//		return response;
+//	}
+//	
+//	@DeleteMapping("/removeStockDetails")
+//	public ResponseEntity<Stock> removeStockDetails(@PathVariable Stock stock) {
+//		LOG.info("removeStockDetails");
+//		Stock stk = stockService.removeStockDetails(stock);
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.add("message", "Stock deleted successfully.");
+//		LOG.info(headers.toString());
+//		ResponseEntity<Stock> response = new ResponseEntity<Stock>(stk, headers, HttpStatus.OK);
+//		return response;
+//	}
 
 
 }

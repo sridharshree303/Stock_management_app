@@ -1,5 +1,5 @@
-package com.cg.stock.application.controller;
-
-public class ManagerController {
-
-}
+//package com.cg.stock.application.controller;
+//
+//public class ManagerController {
+//
+//}

@@ -7,11 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cg.stock.application.dao.ICompanyDAO;
+//import com.cg.stock.application.dao.ICompanyDAO;
 import com.cg.stock.application.dao.IStockDAO;
-import com.cg.stock.application.dao.InvestorDAO;
-import com.cg.stock.application.dto.Company;
-import com.cg.stock.application.dto.Investor;
+//import com.cg.stock.application.dao.InvestorDAO;
+//import com.cg.stock.application.dto.Investor;
 import com.cg.stock.application.dto.Stock;
 
 @Service
@@ -22,64 +21,64 @@ public class StockService implements IStockService {
 	@Autowired
 	private IStockDAO iStockDao;
 	
-	@Autowired
-	private ICompanyDAO iCompanyDao;
-	
-	@Autowired
-	private InvestorDAO investorDao;
+//	@Autowired
+//	private ICompanyDAO iCompanyDao;
+//	
+//	@Autowired
+//	private InvestorDAO investorDao;
 
 	@Override
 	public Stock addStockDetails(Stock stock) {
-		// TODO Auto-generated method stub
-		return null;
+		LOG.info("Service addStockDetails");
+		return null;//iStockDao.addStockDetails(stock);
 	}
 
-	@Override
-	public Stock updateStockDetails(Stock stock) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Stock removeStockDetails(Stock stock) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Stock viewStockDetails(Stock stock) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Stock> viewAllStockDetails() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Stock viewStockByCompanyName(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Stock> viewStockByInvestor(Investor inv) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Stock> viewAllGrowingStocks() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Stock> viewAllReducingStocks() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public Stock updateStockDetails(Stock stock) {
+//		LOG.info("Service updateStockDetails");
+//		return null;//iStockDao.updateStockDetails(stock);
+//	}
+//
+//	@Override
+//	public Stock removeStockDetails(Stock stock) {
+//		LOG.info("Service removeStockDetails");
+//		return null;//iStockDao.removeStockDetails(stock);
+//	}
+//
+//	@Override
+//	public Stock viewStockDetails(Stock stock) {
+//		LOG.info("Service viewStockDetails");
+//		return null;// iStockDao.viewStockDetails(stock);
+//	}
+//
+//	@Override
+//	public List<Stock> viewAllStockDetails() {
+//		LOG.info("Service viewAllStockDetails");
+//		return null;// iStockDao.viewAllStockDetails();
+//	}
+//
+//	@Override
+//	public Stock viewStockByCompanyName(String name) {
+//		LOG.info("Service viewStockByCompanyName");
+//		return null;//iStockDao.viewStockByCompanyName(name);
+//	}
+//
+//	@Override
+//	public List<Stock> viewStockByInvestor(Investor inv) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Stock> viewAllGrowingStocks() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Stock> viewAllReducingStocks() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 }
